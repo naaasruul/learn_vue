@@ -29,14 +29,14 @@
         <div class="mb-3">
           <h5>Want more spam ? </h5>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="Newsletter" id="newsletter">
+            <input class="form-check-input" type="checkbox" value="Newsletter" id="newsletter" v-model="formData.newsLetter">
             <label class="form-check-label" for="newsletter">
               Newsletter
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="Promotions" id="promotions">
-            <label class="form-check-label" for="newsletter">
+            <input class="form-check-input" type="checkbox" value="Promotions" id="promotions" v-model="formData.promotions">
+            <label class="form-check-label" for="promotions">
               Promotions
             </label>
           </div>
@@ -78,6 +78,8 @@ const formData = reactive(
     email: '',
     subject: '',
     message: '',
+    newsLetter: false,
+    promotions: false,
   }
 )
 
